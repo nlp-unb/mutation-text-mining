@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary SPARQL queries to calculate metrics for mutation impact extraction.
 
 = Introduction =
 
