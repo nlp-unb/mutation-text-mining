@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Semantic database to store gold standard corpora.
 
 = Introduction =
 
