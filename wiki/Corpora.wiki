@@ -7,7 +7,6 @@ SPARQL endpoint: [http://example.org/mutation-db]
     * RDF: [http://example.org/enzyminer-corpus.rdf]
     * CSV: [http://example.org/enzyminer-corpus.csv]
     * Context: [http://example.org/mutation-db/enzyminer-corpus.rdf]
-
   # Haloalkane dehalogenase corpus (Dhla corpus)
     * RDF: [http://example.org/dhla-corpus.rdf]
     * CSV: [http://example.org/dhla-corpus.csv]
