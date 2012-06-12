@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary SPARQL queries to view data in semantic repositories (Sesame or RDF).
 
 = Introduction =
 
