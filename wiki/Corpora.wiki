@@ -1,4 +1,4 @@
-# Available corpora.
+#summary Available corpora.
 
 = Available corpora =
 
