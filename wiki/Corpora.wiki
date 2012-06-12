@@ -1,11 +1,14 @@
 = Available corpora =
 
+Corpora are represented in different formats. RDF is default format. Corpora are stored in a triple store with different context.
+SPARQL endpoint: [http://example.org/mutation-db]
+
   # Enzyminer corpus
     * RDF: [http://example.org/enzyminer-corpus.rdf]
     * CSV: [http://example.org/enzyminer-corpus.csv]
-    * SPARQL endpoint: [http://example.org/mutation-db]
+    * Context: [http://example.org/mutation-db/enzyminer-corpus.rdf]
 
   # Haloalkane dehalogenase corpus (Dhla corpus)
     * RDF: [http://example.org/dhla-corpus.rdf]
     * CSV: [http://example.org/dhla-corpus.csv]
-    * SPARQL endpoint: [http://example.org/mutation-db]
+    * Context: [http://example.org/mutation-db/dhla-corpus.rdf]
