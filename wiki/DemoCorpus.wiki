@@ -20,8 +20,8 @@ Corpora are stored in a triple store with different context meta-data.
     * Context: [http://example.com/kinmut-corpus-demo.rdf]
   # Enzyminer corpus experiment
     * RDF: 
-    ** mutation grounding results []
-    ** mutation impact extraction results []
+       * mutation grounding results []
+       * mutation impact extraction results []
     * Context: [http://example.com/enzyminer-corpus-experiment.rdf]
   # KinMut corpus experiment
     * Context: [http://example.com/kinmut-corpus-experiment.rdf]
