@@ -12,8 +12,8 @@ Corpora are stored in a triple store with different context meta-data.
 
 
   # Enzyminer corpus demo
-    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.rdf&can=2&q=]
-    * CSV: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.csv&can=2&q=]
+    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.rdf&can=2&q= enzyminer-corpus-demo.rdf]
+    * CSV: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.csv&can=2&q= enzyminer-corpus-demo.csv]
   # KinMut corpus demo
     * RDF: []
     * CSV: []
