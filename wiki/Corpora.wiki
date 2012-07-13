@@ -25,16 +25,6 @@ We retrieved 201 documents annotated with singular amino acid substitutions grou
 in the database. Based on this comparison, we discarded about 70 documents that appear annotated with protein-level mutations that they don’t seem to mention directly, although this may be due to the translation from SNPs made by the curators. The final size of the corpus is 128 documents. In total, we have 271 mutations linked to 26 different UniProt identifiers.
 
 == Format. ==
-Corpora are represented in different formats. RDF is default format. Corpora are stored in a triple store with different context.
-SPARQL endpoint: [http://138.119.11.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
-
-== Demo corpora. ==
-
-  # Enzyminer corpus
-    * RDF: [http://example.org/enzyminer-corpus.rdf]
-    * CSV: [http://example.org/enzyminer-corpus.csv]
-    * Context: [http://example.org/mutation-db/enzyminer-corpus.rdf]
-  # Haloalkane dehalogenase corpus (Dhla corpus)
-    * RDF: [http://example.org/dhla-corpus.rdf]
-    * CSV: [http://example.org/dhla-corpus.csv]
-    * Context: [http://example.org/mutation-db/dhla-corpus.rdf]
+Corpora are available in RDF format.
+*You can obtains them by simple registration. [link to register page]*
+To see annotation in table format use Sesame Query Tool [link to downloads] to convert RDF to CSV.
