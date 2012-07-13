@@ -28,3 +28,6 @@ in the database. Based on this comparison, we discarded about 70 documents that 
 Corpora are available in RDF format.
 *You can obtains them by simple registration. [link to register page]*
 To see annotation in table format use Sesame Query Tool [link to downloads] to convert RDF to CSV.
+
+== Demo corpus. ==
+[http://code.google.com/p/mutation-text-mining/wiki/DemoCorpus Here] you can try demo corpus, example experimental data, try example queries, etc.
