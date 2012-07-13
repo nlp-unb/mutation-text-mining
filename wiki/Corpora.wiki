@@ -2,8 +2,33 @@
 
 = Available corpora =
 
+One of our seed corpora is based on an extract from the EnzyMinde [?] abstract database. It was annotated manually and comprises 38 randomly selected full text documents with 176 different mutations linked to 49 different protein sequences.
+In what follows, we call it simply “EnzyMiner corpus”.
+
+We annotated documents with mutation impact information which includes:
+# Studied protein-level mutations, in the form of singular amino acid substitutions. They are represented as triples specifying the wild type and mutant residues, and the absolute positions of the mutations on the corresponding amino acid sequences. For situations when the effects of several simultaneous amino acid substitutions are studied, we allow grouping them in what we call combined
+mutations.
+# Proteins to which the mutations are related, identified with UniProt IDs. The host organisms and sets of specific protein sequences can be identified via the UniProt IDs.
+# Molecular functions specified as Gene Ontology [?] classes.
+# Mutation impacts qualified as Positive, Negative or Neutral.
+# Text fragments the information was extracted from. Typical fragments contain mentions of protein properties, impact directionality words, such as “increased” or “worse”, mutation mentions, protein and organism names, etc.
+# Documents identified with PubMed IDs.
+
+=== DHLA corpus. ===
+This is a small corpus comprising 13 documents with 54 unique mutations on Haloalkane Dehalogenases, manually annotated similarly to the EnzyMiner documents (see [1]).
+
+=== COSMIC-based corpus. ===
+We have an extract from the COSMIC database [?] containing 63 documents for three target genes: FGFR3, MEN1 and PIK3CA. Unlike the EnzyMiner and DHLA corpora, this corpus does not identify mutation impacts, although it links mutations to proteins and, thus, is suitable for mutation grounding benchmarking.
+
+=== KinMutBase-based corpus. ===
+We retrieved 201 documents annotated with singular amino acid substitutions grounded to proteins, from the KinMutBase [2] database. We additionally curated the selection by running MutationFinder, which is a reliable tool for this purpose due to its very high recall, and comparing the results with the annotations
+in the database. Based on this comparison, we discarded about 70 documents that appear annotated with protein-level mutations that they don’t seem to mention directly, although this may be due to the translation from SNPs made by the curators. The final size of the corpus is 128 documents. In total, we have 271 mutations linked to 26 different UniProt identifiers.
+
+== Format. ==
 Corpora are represented in different formats. RDF is default format. Corpora are stored in a triple store with different context.
-SPARQL endpoint: [http://example.org/mutation-db]
+SPARQL endpoint: [http://138.119.11.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
+
+== Demo corpora. ==
 
   # Enzyminer corpus
     * RDF: [http://example.org/enzyminer-corpus.rdf]
