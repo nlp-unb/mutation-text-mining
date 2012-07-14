@@ -7,7 +7,7 @@ We also provide example results of our mutation grounding and mutation impact ex
 Corpora and experiment results are available in [downloads].
 
 
-You can also use SPARQL endpoint: [http://138.119.11.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
+You can also use SPARQL endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
 Corpora are stored in a triple store with different context meta-data.
 
 
