@@ -4,9 +4,9 @@ Mutation Grounding
 
   # Enzyminer corpus experiment
     * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mg.rdf&can=2&q= enzyminer-corpus-experiment-mg.rdf]
-    * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: [http://example.com/enzyminer-corpus-experiment.rdf]
+    * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: <http://example.com/enzyminer-corpus-experiment.rdf>
   # KinMut corpus experiment
-    * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: [http://example.com/kinmut-corpus-experiment.rdf]
+    * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: <http://example.com/kinmut-corpus-experiment.rdf>
 
 Mutation Impact Extraction
 
