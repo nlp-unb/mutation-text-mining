@@ -4,24 +4,14 @@
 Demo corpus consists of 4 documents from Enzyminer coprus and 4 documents from KinMut corpus.
 We also provide example results of our mutation grounding and mutation impact extraction systems. See how to use them with in evaluation.
 
-Corpora and experiment results are available in [downloads].
-
-
-You can also use SPARQL endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
-Corpora are stored in a triple store with different context meta-data.
-
+Demo corpora are available in RDF (graph), CSV (table), and under Sesame SPARQL Endpoint.
 
   # Enzyminer corpus demo
     * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.rdf&can=2&q= enzyminer-corpus-demo.rdf]
     * CSV: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.csv&can=2&q= enzyminer-corpus-demo.csv]
-  # KinMut corpus demo
-    * RDF: []
-    * CSV: []
-    * Context: [http://example.com/kinmut-corpus-demo.rdf]
-  # Enzyminer corpus experiment
-    * RDF: 
-       * mutation grounding results []
-       * mutation impact extraction results []
-    * Context: [http://example.com/enzyminer-corpus-experiment.rdf]
-  # KinMut corpus experiment
-    * Context: [http://example.com/kinmut-corpus-experiment.rdf]
+    * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: <http://example.com/enzyminer-corpus-demo.rdf>
+
+ # KinMut corpus demo
+    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=kinmut-corpus-demo.rdf&can=2&q= kinmut-corpus-demo.rdf ]
+    * CSV: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=kinmut-corpus-demo.csv&can=2&q= kinmut-corpus-demo.csv]
+    * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: <http://example.com/kinmut-corpus-experiment.rdf>
