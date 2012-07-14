@@ -3,7 +3,7 @@
 Mutation Grounding
 
   # Enzyminer corpus experiment
-    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mg.rdf&can=2&q=]
+    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mg.rdf&can=2&q= enzyminer-corpus-experiment-mg.rdf]
     * Context: [http://example.com/enzyminer-corpus-experiment.rdf]
   # KinMut corpus experiment
     * Context: [http://example.com/kinmut-corpus-experiment.rdf]
@@ -11,5 +11,5 @@ Mutation Grounding
 Mutation Impact Extraction
 
   # Enzyminer corpus experiment
-    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mie.rdf&can=2&q=]
+    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mie.rdf&can=2&q= enzyminer-corpus-experiment-mie.rdf ]
     * Context: [http://example.com/enzyminer-corpus-experiment.rdf]
