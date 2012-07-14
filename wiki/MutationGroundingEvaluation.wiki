@@ -12,8 +12,12 @@ Two standard measures for mutation grounding performance evaluation are used:
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
+= SPARQL queries to calculate results =
+Here are presented SPARQL query templates for performance metrics computation.
+<br><br>
+!!! Try [DemoMutationGroundingQueries DEMO queries] (build from these templates) on DEMO SPARQL Endpoint.
 
-= SPARQL: correctly grounded mutations =
+== SPARQL: correctly grounded mutations ==
 {{{
 PREFIX sio:<http://semanticscience.org/resource/>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
