@@ -4,5 +4,4 @@
 
 
 
-= Sesmae Query Client =
-
+= Sesame Query Client =
