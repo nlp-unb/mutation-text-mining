@@ -1,14 +1,14 @@
 #summary MutationGroundingEvaluation.
 
 = Task =
-
-
+*Mutation Grounding* is assigning mutations from text to protein sequences. <br>
+The specific task of mutation grounding algorithms is to find, in a sequence database, the exact sequence referred to in the text and to do this by verifying whether the exact positions and identity of the wild-type amino acid residues, described in the texts, are found on the candidate sequence.
 
 
 = Metrics =
 Two standard measures for mutation grounding performance evaluation are used:
- * precision, defined as the fraction of correctly grounded mutations (true positives) over all grounded mutations (true positives + false positives), and
- * recall, defined as the fraction of correctly grounded mutations over all mutations in the gold standard (true positives + false negatives).
+ * *precision*, defined as the fraction of correctly grounded mutations (true positives) over all grounded mutations (true positives + false positives), and
+ * *recall*, defined as the fraction of correctly grounded mutations over all mutations in the gold standard (true positives + false negatives).
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
