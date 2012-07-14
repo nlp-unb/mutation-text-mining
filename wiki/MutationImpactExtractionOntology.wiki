@@ -1,13 +1,4 @@
 #summary Ontology for modeling mutation impact knowledge.
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+The Mutation Impact Extraction Ontology (MIEO) [9] is central to our infrastructure. It currently classes and properties necessary to represent information about mutations at protein level, identified in texts, and extracted mutation impacts on molecular functions. For example, AminoAcidSequenceChange is the class for mutations at protein level. Instances of ProteinVariant are most specific types of protein molecules that completely identify the corresponding amino acid sequences. Instances of _ProteinPropertyChange_ are identified changes of protein properties, that can be linked to the properties that change, corresponding documents and specific fragments, and mutations they result from. To characterise a property change,
+e. g., as positive, which may correspond to increased activity, we can use the suclass `PositiveProteinPropertyChange`. Protein properties, such as molecular functions, are also modelled as individuals whose types are currently taken from the Gene Ontology [10].
