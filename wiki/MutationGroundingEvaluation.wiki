@@ -1,12 +1,19 @@
 #summary MutationGroundingEvaluation.
 
-= Introduction =
-
-Add your content here.
+= Task =
 
 
-= Details =
 
+
+= Metrics =
+Two standard measures for mutation grounding performance evaluation are used:
+ * precision, defined as the fraction of correctly grounded mutations (true positives) over all grounded mutations (true positives + false positives), and
+ * recall, defined as the fraction of correctly grounded mutations over all mutations in the gold standard (true positives + false negatives).
+
+The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
+
+
+= SPARQL: correctly grounded mutations =
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
