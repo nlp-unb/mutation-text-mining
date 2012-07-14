@@ -2,22 +2,14 @@
 
 Mutation Grounding
 
-  # Enzyminer corpus
-    * RDF: [http://example.org/enzyminer-corpus.rdf]
-    * CSV: [http://example.org/enzyminer-corpus.csv]
-    * SPARQL endpoint: [http://example.org/mutation-db]
-  # Haloalkane dehalogenase corpus (Dhla corpus)
-    * RDF: [http://example.org/dhla-corpus.rdf]
-    * CSV: [http://example.org/dhla-corpus.csv]
-    * SPARQL endpoint: [http://example.org/mutation-db]
+  # Enzyminer corpus experiment
+    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mg.rdf&can=2&q=]
+    * Context: [http://example.com/enzyminer-corpus-experiment.rdf]
+  # KinMut corpus experiment
+    * Context: [http://example.com/kinmut-corpus-experiment.rdf]
 
 Mutation Impact Extraction
 
-  # Enzyminer corpus
-    * RDF: [http://example.org/enzyminer-corpus.rdf]
-    * CSV: [http://example.org/enzyminer-corpus.csv]
-    * SPARQL endpoint: [http://example.org/mutation-db]
-  # Haloalkane dehalogenase corpus (Dhla corpus)
-    * RDF: [http://example.org/dhla-corpus.rdf]
-    * CSV: [http://example.org/dhla-corpus.csv]
-    * SPARQL endpoint: [http://example.org/mutation-db]
+  # Enzyminer corpus experiment
+    * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mie.rdf&can=2&q=]
+    * Context: [http://example.com/enzyminer-corpus-experiment.rdf]
