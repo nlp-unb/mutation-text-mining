@@ -2,6 +2,7 @@
 
 = Available corpora =
 
+== EnzyMiner corpus. ==
 One of our seed corpora is based on an extract from the EnzyMinner (link) abstract database. It was annotated manually and comprises 38 randomly selected full text documents with 176 different mutations linked to 49 different protein sequences.
 In what follows, we call it simply “EnzyMiner corpus”.
 
