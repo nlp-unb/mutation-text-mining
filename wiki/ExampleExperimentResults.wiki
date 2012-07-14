@@ -1,4 +1,4 @@
-= Available experiment results =
+= Example experiment results =
 
 Mutation Grounding
 
@@ -12,4 +12,4 @@ Mutation Impact Extraction
 
   # Enzyminer corpus experiment
     * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-experiment-mie.rdf&can=2&q= enzyminer-corpus-experiment-mie.rdf ]
-    * SPAQRL Endpoint: [] Context: [http://example.com/enzyminer-corpus-experiment.rdf]
+    * SPAQRL Endpoint: [] <br> Context: <http://example.com/enzyminer-corpus-experiment.rdf>
