@@ -4,3 +4,7 @@
 <br>
 Note that some of our target mutation tasks are related to the extraction of relations between entities rather than just identifying some entities of interest. We use custom reification for such relation, in particular to facilitate linking them to documents and more specific provenance information. For example, extracted statements of mutations impacting protein properties are represented as instance of the class _!StatementOfMutationEffect_. Likewise, instances of _!StatementOfProteinPropertyChange_ link protein property change instances to the corresponding protein properties.
 Note that our MIEO uses the [http://code.google.com/p/semanticscience/wiki/SIO Semanticscience Integrated Ontology (SIO)] as an upper ontology, and the [http://lsrn.org LSRN ontology] to represent records and identifiers, as illustrated in the next section.
+
+= Doanload =
+[http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl]
+[http://code.google.com/p/mutation-text-mining/downloads/detail?name=mutation-impact-extraction-ontology.owl&can=2&q= mutation-impact-extraction-ontology.owl]
