@@ -1,5 +1,10 @@
 #summary Demo Mutation Grounding SPARQL Queries.
 
+SPARQL Endpoint with demo corpus and loaded demo experiment results:
+[http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
+
+Insert queries into Sesame triple store query interface (*Query* left)
+
 == SPARQL: correctly grounded mutations ==
 {{{
 PREFIX sio:<http://semanticscience.org/resource/>
