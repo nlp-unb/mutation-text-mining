@@ -16,6 +16,7 @@ The example below shows evaluation using *micro averaging* that, essentially, tr
 Here are presented SPARQL query templates for performance metrics computation.
 <br><br>
 !!! Try [DemoMutationGroundingQueries DEMO queries] (build from these templates) on DEMO SPARQL Endpoint.
+To use template one has just to specify named graphs.
 
 == SPARQL: correctly grounded mutations ==
 {{{
