@@ -1,7 +1,7 @@
 #summary Demo corpus: Enzyminer and !KinMut.
 
 = Demo corpus. =
-Demo corpus consists of 4 documents from Enzyminer coprus and 4 documents from KinMut corpus.
+Demo corpus consists of 4 documents from Enzyminer coprus and 4 documents from !KinMut corpus.
 We also provide example results of our mutation grounding and mutation impact extraction systems. See how to use them with in evaluation.
 
 Demo corpora are available in RDF (graph), CSV (table), and under Sesame SPARQL Endpoint.
