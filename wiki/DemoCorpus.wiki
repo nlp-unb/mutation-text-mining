@@ -1,4 +1,4 @@
-#summary Demo corpus: Enzyminer and KinMut.
+#summary Demo corpus: Enzyminer and !KinMut.
 
 = Demo corpus. =
 Demo corpus consists of 4 documents from Enzyminer coprus and 4 documents from KinMut corpus.
@@ -11,7 +11,7 @@ Demo corpora are available in RDF (graph), CSV (table), and under Sesame SPARQL 
     * CSV: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=enzyminer-corpus-demo.csv&can=2&q= enzyminer-corpus-demo.csv]
     * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: <http://example.com/enzyminer-corpus-demo.rdf>
 
- # KinMut corpus demo
+ # !KinMut corpus demo
     * RDF: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=kinmut-corpus-demo.rdf&can=2&q= kinmut-corpus-demo.rdf ]
     * CSV: [http://code.google.com/p/mutation-text-mining/downloads/detail?name=kinmut-corpus-demo.csv&can=2&q= kinmut-corpus-demo.csv]
     * SPAQRL Endpoint: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo] <br> Context: <http://example.com/kinmut-corpus-experiment.rdf>
