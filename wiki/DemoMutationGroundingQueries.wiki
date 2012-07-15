@@ -3,7 +3,7 @@
 SPARQL Endpoint with demo corpus and loaded demo experiment results:
 [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
 
-Insert queries into Sesame triple store query interface (*Query* left)
+Insert queries into Sesame triple store query interface (*Query* in the left panel)
 
 == SPARQL: correctly grounded mutations ==
 {{{
