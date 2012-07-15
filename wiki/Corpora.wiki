@@ -2,7 +2,7 @@
 
 = Available corpora =
 
-== EnzyMiner corpus. ==
+== !EnzyMiner corpus. ==
 One of our seed corpora is based on an extract from the !EnzyMinner (link) abstract database. It was annotated manually and comprises 38 randomly selected full text documents with 176 different mutations linked to 49 different protein sequences.
 In what follows, we call it simply “!EnzyMiner corpus”.
 
@@ -27,7 +27,7 @@ in the database. Based on this comparison, we discarded about 70 documents that 
 
 == Format. ==
 Corpora are available in RDF format.
-*You can obtains them by simple registration. (link to register page)*
+*You can obtains them by simple registration [RegistrationPage HERE]*
 To see annotation in table format use Sesame Query Tool (link to downloads) to convert RDF to CSV.
 
 == Demo corpus. ==
