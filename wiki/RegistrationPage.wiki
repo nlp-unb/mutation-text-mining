@@ -1,6 +1,6 @@
 #summary Registration Page to acquire Mutation Corpora.
 
-To get 242 document corpus, please send your request to artjom.unb@gmail.com and provide:
+To get 242 documents corpus, please send your request to artjom.unb@gmail.com and provide:
  # Your Name or Institution (+Country)
  # Email
  # Purpose
