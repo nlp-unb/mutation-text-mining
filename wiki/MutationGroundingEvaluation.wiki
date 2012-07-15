@@ -27,7 +27,7 @@ SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_rec
 
 WHERE {
 
-GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
+GRAPH <http://example.com/gold-standard.rdf> {
       #	'article'
       ?document a sio:SIO_000154 .
       #	'is subject of'
@@ -69,7 +69,7 @@ GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
       FILTER (?uniprot_record_id != "")
 }
 
-GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
+GRAPH <http://example.com/experiment.rdf> {
       
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
@@ -114,7 +114,7 @@ PREFIX lsrn:<http://purl.oclc.org/SADI/LSRN/>
 SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_record_id
 WHERE {
 
-GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
+GRAPH <http://example.com/gold-standard.rdf> {
 
       #	'article'
       ?document a sio:SIO_000154 .
@@ -159,7 +159,7 @@ GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
 
 
 FILTER EXISTS {
-GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
+GRAPH <http://example.com/experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
@@ -215,7 +215,7 @@ SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_rec
 
 WHERE {
 
-GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
+GRAPH <http://example.com/gold-standard.rdf> {
 
       #	'article'
       ?document a sio:SIO_000154 .
@@ -258,7 +258,7 @@ GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
       FILTER (?uniprot_record_id != "")
 }
 
-GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
+GRAPH <http://example.com/experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
