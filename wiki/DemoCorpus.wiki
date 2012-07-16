@@ -1,4 +1,4 @@
-#summary Demo corpus: Enzyminer and !KinMut.
+#summary Demo corpus: Enzyminer and KinMut.
 
 = Demo corpus. =
 Demo corpus consists of 4 documents from Enzyminer coprus and 4 documents from !KinMut corpus.
