@@ -15,13 +15,13 @@ In order for an extracted mutation impact to be considered correct all the parts
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
-= SPARQL queries to calculate results =
+== SPARQL queries to calculate results ==
 Here are presented SPARQL query templates for performance metrics computation.
 <br><br>
 !!! Try [DemoMutationImpactExtractionQueries DEMO queries] (build from these templates) on DEMO SPARQL Endpoint.
 To use template one has just to specify named graphs.
 
-== SPARQL: correctly grounded mutations ==
+== SPARQL: correct mutation impacts==
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -147,7 +147,7 @@ ORDER BY ?pubmed_id
 }}}
 
 
-= SPARQL: all found mutation-impact relation =
+== SPARQL: all retrieved mutation impacts ==
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -274,7 +274,7 @@ ORDER BY ?pubmed_id
 
 }}}
 
-= SPARQL: all mutations in the gold standard =
+= SPARQL: all uniquely mentioned mutation impacts and available in gold standard =
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
