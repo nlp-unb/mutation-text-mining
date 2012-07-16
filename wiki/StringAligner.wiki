@@ -1,0 +1,3 @@
+#summary Tool to align strings. Aligns strings in RDF models.
+
+Coming very soon ...
