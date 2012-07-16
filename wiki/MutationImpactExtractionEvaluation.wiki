@@ -1,16 +1,17 @@
 #summary One-sentence summary of this page.
 
 = Task =
-*Mutation Impact Extraction* is ... . <br>
-
-
+*Mutation Impact Extraction* is identifying the impact of the mutational change with respect to the wild-type protein. The result can be of any form, but should contain all the knowledge stated in a source concerning the impact. <br>
 
 = Metrics =
 Two standard measures for mutation impact extraction performance evaluation are used:
- * *precision*, defined as the number of *correct relations* over *all retrieved relations*
- * *recall*, defined as the number of *correct relations* over *all uniquely mentioned relations*.
+ * *precision*, defined as the number of *correct mutation impacts* over *all retrieved mutation impacts*
+ * *recall*, defined as the number of *correct mutation impacts* over *all uniquely mentioned mutation impacts*.
 
-In order for an extracted mutation-impact relation to be considered correct all the parts have to be correct i.e. the protein the mutation is grounded to, the protein property that is being impacted, the direction of the impact and the causal mutation.
+What to consider as correct mutation impact depends on the focus of evaluation. See example of specified metric below.
+
+= Specified metric #1 =
+In order for an extracted mutation impact to be considered correct all the parts have to be correct i.e. the protein the mutation is grounded to, the protein property that is being impacted, the direction of the impact and the causal mutation.
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
