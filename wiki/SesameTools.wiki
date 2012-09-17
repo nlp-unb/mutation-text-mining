@@ -1,8 +1,5 @@
-#summary Sesame Utilites
+#summary Sesame Utilities
 
-= Sesame Loader =
-[http://code.google.com/p/mutation-text-mining/downloads/detail?name=sesame-loader.tar.gz&can=2&q= Download] See README for details.
+= Sesame Command Line Utilities =
+[http://code.google.com/p/mutation-text-mining/downloads/detail?name=sesame-utils-1.0-project.tar.gz&can=2&q= Download] See README for details.
 
-
-= Sesame Query Client =
-Will be soon.
