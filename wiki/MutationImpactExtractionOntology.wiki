@@ -6,5 +6,5 @@ Note that some of our target mutation tasks are related to the extraction of rel
 Note that our MIEO uses the [http://code.google.com/p/semanticscience/wiki/SIO Semanticscience Integrated Ontology (SIO)] as an upper ontology, and the [http://lsrn.org LSRN ontology] to represent records and identifiers, as illustrated in the next section.
 
 = Download =
-[http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl] <br>
+[http://cbakerlab:8080/ontologies/mutation-impact-extraction-ontology.owl] <br>
 [http://code.google.com/p/mutation-text-mining/downloads/detail?name=mutation-impact-extraction-ontology.owl&can=2&q= mutation-impact-extraction-ontology.owl]
