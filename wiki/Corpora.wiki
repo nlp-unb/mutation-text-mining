@@ -7,8 +7,7 @@ One of our seed corpora is based on an extract from the !EnzyMinner (link) abstr
 In what follows, we call it simply “!EnzyMiner corpus”.
 
 We annotated documents with mutation impact information which includes:
- # Studied protein-level mutations, in the form of singular amino acid substitutions. They are represented as triples specifying the wild type and mutant residues, and the absolute positions of the mutations on the corresponding amino acid sequences. For situations when the effects of several simultaneous amino acid substitutions are studied, we allow grouping them in what we call combined
-mutations.
+ # Studied protein-level mutations, in the form of singular amino acid substitutions. They are represented as triples specifying the wild type and mutant residues, and the absolute positions of the mutations on the corresponding amino acid sequences. For situations when the effects of several simultaneous amino acid substitutions are studied, we allow grouping them in what we call combined mutations.
  # Proteins to which the mutations are related, identified with !UniProt IDs. The host organisms and sets of specific protein sequences can be identified via the !UniProt IDs.
  # Molecular functions specified as Gene Ontology (link) classes.
  # Mutation impacts qualified as Positive, Negative or Neutral.
