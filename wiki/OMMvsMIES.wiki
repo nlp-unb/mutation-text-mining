@@ -3,8 +3,8 @@
 = Comparative evaluation mutation impact extraction systems: Open Mutation Miner `[1,2]` vs Mutation Impact Extraction System `[3]` =
 
 To investigate the potential of the infrastructure for comparative evaluation and analysis, we adapted the Open Mutation Miner (OMM) system to produce outputs compatible with our infrastructure and compared the system with the mutation impact extraction system (MIES).<br>
-We undertook a cross-evaluation of the systems – MIES on the OMM Impact corpus and OMM on the DHLA corpus. Moreover, both systems were evaluated on the new Enzyminer corpus.
-Details of evaluation, analysis and discussion see [http://code.google.com/p/mutation-text-mining/downloads/detail?name=bmc_article_draft_2013.pdf&can=2&q= paper_draft.pdf]
+We undertook a cross-evaluation of the systems – MIES on the OMM Impact corpus and OMM on the DHLA corpus. Moreover, both systems were evaluated on the new Enzyminer corpus.<br>
+*Details of evaluation, analysis and discussion of results*, please, see in [http://code.google.com/p/mutation-text-mining/downloads/detail?name=bmc_article_draft_2013.pdf&can=2&q= paper_draft.pdf]
 
 == References ==
 <br>
