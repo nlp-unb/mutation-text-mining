@@ -29,15 +29,15 @@ in the database. Based on this comparison, we discarded about 70 documents that 
 This corpus containing 40 documents was used in `[1]' to test the Open Mutation Miner system. It contains impact sentence annotations with the EC codes of enzymes, host organisms and mutations. An impact sentence describes a mutation impact on a protein property and does not necessarily contain a mutation
 mention. 48 of 2045 impact sentences were not grounded to mutations. If a sentence contained several impact mentions, it was annotated several times. Unlike the Enzyminer corpus, the OMM Impact corpus was not annotated with protein properties or mutation impact direction.
 
-== Format. ==
+= Format. =
 Corpora are available in RDF format.
 *You can obtains them by simple registration [RegistrationPage HERE]*
 To see annotation in table format use Sesame Query Tool (link to downloads) to convert RDF to CSV.
 
-== Demo corpus. ==
+= Demo corpus. =
 [http://code.google.com/p/mutation-text-mining/wiki/DemoCorpus Here] you can try demo corpus, example experimental data, try example queries, etc.
 
-== References ==
+= References =
 <br>
 `[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
 <br>
