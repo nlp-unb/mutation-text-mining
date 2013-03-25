@@ -291,7 +291,7 @@ The example below shows evaluation using *micro averaging* that, essentially, tr
 === SPARQL queries to calculate results ===
 Here are presented SPARQL query templates for performance metrics computation.
 <br><br>
-SPARQL Endpoint with demo corpus and loaded demo experiment results: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
+SPARQL Endpoint with demo corpus and loaded demo experiment results: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo/query]
 
 Insert queries into Sesame triple store query interface (Query in the left panel) 
 
