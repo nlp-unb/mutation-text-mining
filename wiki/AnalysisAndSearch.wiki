@@ -63,7 +63,6 @@ GRAPH <http://example.com/gold-standard.rdf> {
 }}}
 
 === Get impact sentences ===
-
 {{{
 SELECT DISTINCT ?pubmed_id ?property_change ?text_selector
 WHERE {
@@ -95,7 +94,8 @@ WHERE {
 
 === Get false negatives ===
 The SPARQL negation-related features proved especially useful in this effort because they allowed us to identify false negatives – cases presented in gold standard and absent from system results, thus identifying potential targets for optimisation. The following query represents such a use case where the FILTER NOT
-EXISTS feature is applied to exclude correct system results for mutation grounding from the set of all results:
+EXISTS feature is applied to exclude correct system results for mutation grounding from the set of all results.
+<br>
 Endpoints: <br>
  * Open Mutation Miner on DHLA Corpus:
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/dhla-omm/query]
