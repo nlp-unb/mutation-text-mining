@@ -1,6 +1,6 @@
 #summary Mutation Impact Sentence Recognition Evaluation Task.
 
-
+<wiki:toc max_depth="1" />
 
 = Evaluation Task: Mutation Impact Sentence Recognition =
 
@@ -10,7 +10,7 @@ This task was evaluated in `[1]`.
  * *recall*, defined as the number of correctly identified impact sentences over all impact sentences in gold standard.
 <br>
 
-<wiki:toc max_depth="1" />
+
 
 = Example =
 Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and OMM Impact Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
