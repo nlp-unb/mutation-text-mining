@@ -1,5 +1,4 @@
 #summary Sesame Utilities
 
 = Sesame Command Line Utilities =
-[http://code.google.com/p/mutation-text-mining/downloads/detail?name=sesame-utils-1.0-project.tar.gz&can=2&q= Download] See README for details.
-
+[http://mutation-text-mining.googlecode.com/files/sesame-utils-1.0-jar-with-dependencies.jar Download] See README for details.
