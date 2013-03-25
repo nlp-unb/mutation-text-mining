@@ -2,3 +2,42 @@
 
 = Sesame Command Line Utilities =
 [http://mutation-text-mining.googlecode.com/files/sesame-utils-1.0-jar-with-dependencies.jar Download]
+
+Get help: java -cp target/sesame-utils-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.sesame_utils.SesameCLI -?
+
+Usage: SesameCLI [OPTIONS]
+Options:
+        --help -? 
+                 Print this message.
+        --task=[sparql,import] -t 
+                Task to execute.
+        --server=url -s 
+                Sesame server URL.
+        --repository=id -r 
+                Repository name. If the repository does not exists, it will be created.
+        --context=uri -c 
+                Optional context (graph name) to load the data into.
+        --user=name -u 
+                User name for the Sesame server.
+        --password=string -p 
+                Password for the user on the Sesame server.
+        --base-uri=uri -b 
+                Optional base URI for the individuals and predicates in the RDF document being loaded.
+        --query=path -o 
+                Path to text file with SPARQl query - *.rq, *.sparql
+        --input=path -i 
+                Input file path.
+        --output=path -o 
+                Output file path.
+        --count -n 
+                Add number of results at the end of the query output.
+        --pretty-format -f 
+                Use only identifiers (no URI bases) in the query output.
+
+Usage example:
+java -cp benchmark/sesame-utils-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.sesame_utils.SesameCLI \
+-t add \
+-i <input.rdf> \
+-s <server-url> \
+-r <repository-name> \
+-c <context>
