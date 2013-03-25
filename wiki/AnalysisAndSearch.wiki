@@ -107,7 +107,7 @@ PREFIX aof:<http://purl.org/ao/foaf/>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX aot:<http://purl.org/ao/types/>
 PREFIX aos:<http://purl.org/ao/selectors/>
-PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
+PREFIX mieo:<http://cbakerlab.unbsj.ca:8080/ontologies/mutation-impact-extraction-ontology.owl#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ao:<http://purl.org/ao/>
 PREFIX pav:<http://purl.org/pav/>
