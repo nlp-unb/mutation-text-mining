@@ -17,7 +17,7 @@ In order for an extracted mutation impact to be considered correct the following
 
 Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and DHLA Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
  * Open Mutation Miner on Enzyminer Corpus:
-   * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-omm/query]
 <br>
  * Open Mutation Miner on DHLA Corpus:
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/dhla-omm/query]
