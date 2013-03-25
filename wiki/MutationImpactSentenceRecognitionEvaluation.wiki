@@ -9,7 +9,7 @@ Precision was defined as the number of correctly identified impact sentences ove
 
 
 = Example =
-Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and OMM Impact Corpus. For each experiment, a SPARQL repository/endpoint is available:<br>
+Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and OMM Impact Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
  * Open Mutation Miner on Enzyminer Corpus:
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
 <br>
