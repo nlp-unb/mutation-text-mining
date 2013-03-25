@@ -1,8 +1,8 @@
 #summary Mutation Impact Sentence Recognition Evaluation Task.
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="2" />
 
-*Evaluation Task: Mutation Impact Sentence Recognition*
+= Evaluation Task: Mutation Impact Sentence Recognition =
 
 This task was evaluated in `[1]`. 
 <br>
@@ -12,7 +12,7 @@ This task was evaluated in `[1]`.
 
 
 
-= Example =
+== Example ==
 Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and OMM Impact Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
  * Open Mutation Miner on Enzyminer Corpus:
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
@@ -33,7 +33,7 @@ Contexts/Named Graphs are for the four experiments:<br>
 <br><br>
 
 
-= SPARQL Query =
+== SPARQL Query ==
 Calculates Precision and Recall
 {{{
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
@@ -191,7 +191,7 @@ WHERE {
 
 }}}
 
-= References =
+== References ==
 <br>
 `[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
 <br>
