@@ -2,7 +2,7 @@
 
 <wiki:toc max_depth="1" />
 
-= Evaluation Task: Mutation Impact Sentence Recognition =
+*Evaluation Task: Mutation Impact Sentence Recognition*
 
 This task was evaluated in `[1]`. 
 <br>
@@ -27,7 +27,7 @@ Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evalu
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-omm/query]
 <br>
 
-Contexts/Named Graphs are for the all four experiments:<br>
+Contexts/Named Graphs are for the four experiments:<br>
 `<http://example.com/gold-standard.rdf>`<br>
 `<http://example.com/experiment.rdf>`
 <br><br>
