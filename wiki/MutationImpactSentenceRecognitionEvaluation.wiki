@@ -1,0 +1,187 @@
+#summary Mutation Impact Sentence Recognition Evaluation Task.
+
+= Evaluation Task: Mutation Impact Sentence Recognition =
+
+This task was evaluated in [1]. 
+<br>
+Precision was defined as the number of correctly identified impact sentences over all recognized impact sentences. The sentence is correctly identified if it matched the gold standard.
+<br><br>
+
+
+= Example =
+Open Mutation Miner [1] and Mutation Impact Extraction System [2] were evaluated on 2 different corpora -- Enzyminer Corpus and OMM Impact Corpus. For each experiment, a SPARQL repository/endpoint is available:<br>
+ * Open Mutation Miner on Enzyminer Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
+<br>
+ * Open Mutation Miner on OMM Impact Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-omm/query]
+<br>
+ * Mutation Impact Extraction System on Enzyminer Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-mies/query]
+<br>
+ * Mutation Impact Extraction System on OMM Impact Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-omm/query]
+<br>
+
+
+= SPARQL Query =
+{{{
+PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX aof:<http://purl.org/ao/foaf/>
+PREFIX ao:<http://purl.org/ao/>
+PREFIX aos:<http://purl.org/ao/selectors/>
+PREFIX lsrn:<http://purl.oclc.org/SADI/LSRN/>
+PREFIX sio:<http://semanticscience.org/resource/>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (xsd:float(?correct)/xsd:float(?relevant) AS ?recall) (xsd:float(?correct)/xsd:float(?retrieved) AS ?precision) ?correct  ?retrieved ?relevant
+WHERE
+{
+# correct
+{
+SELECT (COUNT (*) as ?correct)
+WHERE{
+SELECT DISTINCT ?pubmed_id ?property_change ?text_selector
+WHERE {
+  GRAPH <http://example.com/gold-standard.rdf>
+   {
+      ?document a sio:SIO_000154 .
+      ?document sio:SIO_000629 ?pubmed_record .
+      ?pubmed_record sio:SIO_000008 ?pubmed_identifier .
+      ?pubmed_identifier sio:SIO_000300 ?pubmed_id .
+
+      ?ann a ao:Annotation .
+      ?ann aof:annotatesDocument ?document .
+      ?ann ao:hasTopic ?property_change .
+      ?property_change a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+
+      FILTER NOT EXISTS {
+          ?ann ao:hasTopic ?topic3 .
+          FILTER (?property_change != ?topic3) .
+      }
+
+      ?ann ao:context ?text_selector .
+      ?text_selector a aos:TextSelector . 
+     # ?text_selector aos:exact ?text .
+
+   } .
+
+  GRAPH <http://example.com/experiment.rdf>
+   {
+      ?document2 a sio:SIO_000154 .
+      ?document2 sio:SIO_000629 ?pubmed_record2 .
+      ?pubmed_record2 sio:SIO_000008 ?pubmed_identifier2 .
+      ?pubmed_identifier2 sio:SIO_000300 ?pubmed_id .
+
+      ?ann2 a ao:Annotation .
+      ?ann2 aof:annotatesDocument ?document2 .
+      ?ann2 ao:hasTopic ?property_change2 .
+      ?property_change2 a ?property_change_class2 .
+      ?property_change_class2 rdfs:subClassOf mieo:ProteinPropertyChange .
+
+      FILTER NOT EXISTS {
+          ?ann2 ao:hasTopic ?topic4 .
+          FILTER (?property_change2 != ?topic4) .
+      }
+
+      ?ann2 ao:context ?text_selector2 .
+      ?text_selector2 a aos:TextSelector . 
+     # ?text_selector2 aos:exact ?text2 .
+   } .
+   ?sim a mieo:StringSimilarity .
+   ?text_selector sio:SIO_000008 ?sim . 
+   ?text_selector2 sio:SIO_000008 ?sim .
+   ?sim sio:SIO_000300 ?value . 
+} ORDER BY ?pubmed_id ?property_change ?text_selector
+}
+}
+# end correct
+
+# retrieved
+{
+SELECT (COUNT (*) as ?retrieved)
+WHERE{
+SELECT DISTINCT ?pubmed_id ?property_change ?text_selector
+WHERE {
+  GRAPH <http://example.com/experiment.rdf>
+   {
+     ?document a sio:SIO_000154 .
+      ?document sio:SIO_000629 ?pubmed_record .
+      ?pubmed_record sio:SIO_000008 ?pubmed_identifier .
+      ?pubmed_identifier sio:SIO_000300 ?pubmed_id .
+
+      ?ann a ao:Annotation .
+      ?ann aof:annotatesDocument ?document .
+      ?ann ao:hasTopic ?property_change .
+      ?property_change a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+
+      FILTER NOT EXISTS {
+          ?ann ao:hasTopic ?topic3 .
+          FILTER (?property_change != ?topic3) .
+      }
+
+      ?ann ao:context ?text_selector .
+      ?text_selector a aos:TextSelector . 
+     # ?text_selector aos:exact ?text .
+
+   } .
+} ORDER BY ?pubmed_id
+
+} 
+}
+# end retrieved
+
+# relevant
+{
+SELECT (COUNT (*) as ?relevant)
+WHERE{
+SELECT DISTINCT ?pubmed_id ?property_change ?text_selector
+WHERE {
+  GRAPH <http://example.com/gold-standard.rdf>
+   {
+      ?document a sio:SIO_000154 .
+      ?document sio:SIO_000629 ?pubmed_record .
+      ?pubmed_record sio:SIO_000008 ?pubmed_identifier .
+      ?pubmed_identifier sio:SIO_000300 ?pubmed_id .
+
+      ?ann a ao:Annotation .
+      ?ann aof:annotatesDocument ?document .
+      ?ann ao:hasTopic ?property_change .
+      ?property_change a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+
+      FILTER NOT EXISTS {
+          ?ann ao:hasTopic ?topic3 .
+          FILTER (?property_change != ?topic3) .
+      }
+
+      ?ann ao:context ?text_selector .
+      ?text_selector a aos:TextSelector . 
+     # ?text_selector aos:exact ?text .
+
+   } .
+} ORDER BY ?pubmed_id
+
+}
+}
+# relevant
+
+}
+
+# returns n results
+
+}}}
+
+= References =
+<br>
+`[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
+<br>
+`[2]` [http://www.semanticsoftware.info/open-mutation-miner]
+<br>
+`[3]` [http://www.biomedcentral.com/1471-2164/11/S4/S24 Naderi N, Witte R: Automated extraction and semantic analysis of mutation impacts from the biomedical literature. BMC Genomics 2012, 13(Suppl 4):S10.]
