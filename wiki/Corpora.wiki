@@ -15,17 +15,17 @@ We annotated documents with mutation impact information which includes:
  # Text fragments the information was extracted from. Typical fragments contain mentions of protein properties, impact directionality words, such as “increased” or “worse”, mutation mentions, protein and organism names, etc.
  # Documents identified with !PubMed IDs.
 
-=== DHLA corpus. ===
+== DHLA corpus. ==
 This is a small corpus comprising 13 documents with 54 unique mutations on Haloalkane Dehalogenases, manually annotated similarly to the !EnzyMiner documents.
 
-=== COSMIC-based corpus. ===
+== COSMIC-based corpus. ==
 We have an extract from the COSMIC database (link) containing 63 documents for three target genes: FGFR3, MEN1 and PIK3CA. Unlike the !EnzyMiner and DHLA corpora, this corpus does not identify mutation impacts, although it links mutations to proteins and, thus, is suitable for mutation grounding benchmarking.
 
-=== !KinMutBase-based corpus. ===
+== !KinMutBase-based corpus. ==
 We retrieved 201 documents annotated with singular amino acid substitutions grounded to proteins, from the [http://bioinf.uta.fi/KinMutBase/ KinMutBase] database. We additionally curated the selection by running [http://mutationfinder.sourceforge.net MutationFinder], which is a reliable tool for this purpose due to its very high recall, and comparing the results with the annotations
 in the database. Based on this comparison, we discarded about 70 documents that appear annotated with protein-level mutations that they don’t seem to mention directly, although this may be due to the translation from SNPs made by the curators. The final size of the corpus is 128 documents. In total, we have 271 mutations linked to 26 different !UniProt identifiers.
 
-=== OMM Impact corpus. ===
+== OMM Impact corpus. ==
 This corpus containing 40 documents was used in `[1]' to test the Open Mutation Miner system. It contains impact sentence annotations with the EC codes of enzymes, host organisms and mutations. An impact sentence describes a mutation impact on a protein property and does not necessarily contain a mutation
 mention. 48 of 2045 impact sentences were not grounded to mutations. If a sentence contained several impact mentions, it was annotated several times. Unlike the Enzyminer corpus, the OMM Impact corpus was not annotated with protein properties or mutation impact direction.
 
