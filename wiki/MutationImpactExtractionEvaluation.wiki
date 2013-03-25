@@ -4,14 +4,14 @@
 
 *Mutation Impact Extraction* is identifying the impact of the mutational change with respect to the wild-type protein. The result can be of any form, but should contain all the knowledge stated in a source concerning the impact. <br>
 
-= Metrics =
+== Metrics ==
 Two standard measures for mutation impact extraction performance evaluation are used:
  * *precision*, defined as the number of *correct mutation impacts* over *all retrieved mutation impacts*
  * *recall*, defined as the number of *correct mutation impacts* over *all uniquely mentioned mutation impacts*.
 
 What to consider as correct mutation impact depends on the focus of evaluation. See example of specified metric below.
 
-= Specified metric #1 =
+== Specified metric #1 ==
 The metrics are taken from `[1]`. 
 In order for an extracted mutation impact to be considered correct the following  parts have to be correct i.e. *the protein property* that is being impacted, *the direction* of the impact and *the causal mutation*. If the protein property was a molecular function, it had to be normalised by grounding to Gene Ontology.
 
@@ -34,7 +34,7 @@ Contexts/Named Graphs are for the four experiments:<br>
 `<http://example.com/experiment.rdf>`
 <br><br>
 
-== SPARQL Query ==
+=== SPARQL Query ===
 Calculates Precision and Recall
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -283,12 +283,12 @@ GRAPH <http://example.com/gold-standard.rdf> {
 }}}
 
 
-= Specified metric #2 =
+== Specified metric #2 ==
 In order for an extracted mutation impact to be considered correct all the parts have to be correct i.e. *the protein* the mutation is grounded to, *the protein property* that is being impacted, *the direction* of the impact and *the causal mutation*.
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
-== SPARQL queries to calculate results ==
+=== SPARQL queries to calculate results ===
 Here are presented SPARQL query templates for performance metrics computation.
 <br><br>
 SPARQL Endpoint with demo corpus and loaded demo experiment results: [http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
@@ -296,7 +296,7 @@ SPARQL Endpoint with demo corpus and loaded demo experiment results: [http://138
 Insert queries into Sesame triple store query interface (Query in the left panel) 
 
 
-=== SPARQL: correct mutation impacts ===
+==== SPARQL: correct mutation impacts ====
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -422,7 +422,7 @@ ORDER BY ?pubmed_id
 }}}
 
 
-=== SPARQL: all retrieved mutation impacts ===
+==== SPARQL: all retrieved mutation impacts ====
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -549,7 +549,7 @@ ORDER BY ?pubmed_id
 
 }}}
 
-=== SPARQL: all uniquely mentioned mutation impacts and available in gold standard ===
+==== SPARQL: all uniquely mentioned mutation impacts and available in gold standard ====
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -651,7 +651,7 @@ ORDER BY ?pubmed_id
 
 
 
-= References =
+== References ==
 <br>
 `[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
 <br>
