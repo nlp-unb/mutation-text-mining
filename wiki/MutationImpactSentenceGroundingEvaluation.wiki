@@ -83,18 +83,11 @@ GRAPH <http://example.com/gold-standard.rdf>
       ?statement_of_mutation_effect mieo:arg1 ?mutation_application .
       ?statement_of_mutation_effect mieo:arg2 ?property_change .
 
-
-
       ?ann a ao:Annotation .
       ?ann aof:annotatesDocument ?document .
       ?ann ao:hasTopic ?property_change .
       ?property_change a ?property_change_class .
       ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
-
-      FILTER NOT EXISTS {
-          ?ann ao:hasTopic ?topic .
-          FILTER (?property_change != ?topic) .
-      }
 
       ?ann ao:context ?text_selector .
       ?text_selector a aos:TextSelector . 
@@ -136,11 +129,6 @@ GRAPH <http://example.com/experiment.rdf>
       ?ann2 ao:hasTopic ?property_change2 .
       ?property_change2 a ?property_change_class2 .
       ?property_change_class2 rdfs:subClassOf mieo:ProteinPropertyChange .
-
-      FILTER NOT EXISTS {
-          ?ann2 ao:hasTopic ?topic2 .
-          FILTER (?property_change2 != ?topic2) .
-      }
 
       ?ann2 ao:context ?text_selector2 .
       ?text_selector2 a aos:TextSelector . 
@@ -199,11 +187,6 @@ WHERE {
       ?property_change a ?property_change_class .
       ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
 
-      FILTER NOT EXISTS {
-          ?ann ao:hasTopic ?topic3 .
-          FILTER (?property_change != ?topic3) .
-      }
-
       ?ann ao:context ?text_selector .
       ?text_selector a aos:TextSelector . 
      # ?text_selector aos:exact ?text .
@@ -244,11 +227,6 @@ WHERE {
       ?property_change2 a ?property_change_class2 .
       ?property_change_class2 rdfs:subClassOf mieo:ProteinPropertyChange .
 
-      FILTER NOT EXISTS {
-          ?ann2 ao:hasTopic ?topic4 .
-          FILTER (?property_change2 != ?topic4) .
-      }
-
       ?ann2 ao:context ?text_selector2 .
       ?text_selector2 a aos:TextSelector . 
      # ?text_selector2 aos:exact ?text2 .
@@ -261,7 +239,6 @@ WHERE {
 }
 }
 # end relevant
-
 
 }
 
