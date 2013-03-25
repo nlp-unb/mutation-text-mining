@@ -15,7 +15,7 @@ This task was evaluated in `[1]`.
 == Example ==
 Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and OMM Impact Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
  * Open Mutation Miner on Enzyminer Corpus:
-   * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-omm/query]
 <br>
  * Open Mutation Miner on OMM Impact Corpus:
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-omm/query]
@@ -24,7 +24,7 @@ Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evalu
    * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-mies/query]
 <br>
  * Mutation Impact Extraction System on OMM Impact Corpus:
-   * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-omm/query]
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
 <br>
 
 Contexts/Named Graphs are for the four experiments:<br>
