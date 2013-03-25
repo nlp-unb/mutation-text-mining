@@ -12,7 +12,7 @@ Two standard measures for mutation impact extraction performance evaluation are 
 What to consider as correct mutation impact depends on the focus of evaluation. See example of specified metric below.
 
 = Specified metric #1 =
-The metrics were taken from [1]. 
+The metrics are taken from `[1]`. 
 In order for an extracted mutation impact to be considered correct the following  parts have to be correct i.e. *the protein property* that is being impacted, *the direction* of the impact and *the causal mutation*. If the protein property was a molecular function, it had to be normalised by grounding to Gene Ontology.
 
 Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and DHLA Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
@@ -653,3 +653,6 @@ ORDER BY ?pubmed_id
 <br>
 `[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
 <br>
+`[2]` [http://www.semanticsoftware.info/open-mutation-miner]
+<br>
+`[3]` [http://www.biomedcentral.com/1471-2164/11/S4/S24 Naderi N, Witte R: Automated extraction and semantic analysis of mutation impacts from the biomedical literature. BMC Genomics 2012, 13(Suppl 4):S10.]
