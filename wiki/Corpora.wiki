@@ -37,7 +37,6 @@ To see annotation in table format use Sesame Query Tool (link to downloads) to c
 [http://code.google.com/p/mutation-text-mining/wiki/DemoCorpus Here] you can try demo corpus, example experimental data, try example queries, etc.
 
 == References ==
-= References =
 <br>
 `[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
 <br>
