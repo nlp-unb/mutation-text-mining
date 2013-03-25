@@ -73,11 +73,6 @@ WHERE {
       ?property_change a ?property_change_class .
       ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
 
-      FILTER NOT EXISTS {
-          ?ann ao:hasTopic ?topic3 .
-          FILTER (?property_change != ?topic3) .
-      }
-
       ?ann ao:context ?text_selector .
       ?text_selector a aos:TextSelector . 
      # ?text_selector aos:exact ?text .
@@ -96,11 +91,6 @@ WHERE {
       ?ann2 ao:hasTopic ?property_change2 .
       ?property_change2 a ?property_change_class2 .
       ?property_change_class2 rdfs:subClassOf mieo:ProteinPropertyChange .
-
-      FILTER NOT EXISTS {
-          ?ann2 ao:hasTopic ?topic4 .
-          FILTER (?property_change2 != ?topic4) .
-      }
 
       ?ann2 ao:context ?text_selector2 .
       ?text_selector2 a aos:TextSelector . 
@@ -134,11 +124,6 @@ WHERE {
       ?property_change a ?property_change_class .
       ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
 
-      FILTER NOT EXISTS {
-          ?ann ao:hasTopic ?topic3 .
-          FILTER (?property_change != ?topic3) .
-      }
-
       ?ann ao:context ?text_selector .
       ?text_selector a aos:TextSelector . 
      # ?text_selector aos:exact ?text .
@@ -168,11 +153,6 @@ WHERE {
       ?ann ao:hasTopic ?property_change .
       ?property_change a ?property_change_class .
       ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
-
-      FILTER NOT EXISTS {
-          ?ann ao:hasTopic ?topic3 .
-          FILTER (?property_change != ?topic3) .
-      }
 
       ?ann ao:context ?text_selector .
       ?text_selector a aos:TextSelector . 
