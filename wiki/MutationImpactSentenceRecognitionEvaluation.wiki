@@ -45,7 +45,8 @@ PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT (xsd:float(?correct)/xsd:float(?retrieved) AS ?precision) 
+SELECT 
+(xsd:float(?correct)/xsd:float(?retrieved) AS ?precision) 
 (xsd:float(?correct)/xsd:float(?relevant) AS ?recall)  
 ?correct  ?retrieved ?relevant
 WHERE
