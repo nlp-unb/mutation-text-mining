@@ -1,5 +1,7 @@
 #summary Mutation Impact Sentence Recognition Evaluation Task.
 
+<wiki:toc max_depth="1" />
+
 = Evaluation Task: Mutation Impact Sentence Recognition =
 
 This task was evaluated in `[1]`. 
