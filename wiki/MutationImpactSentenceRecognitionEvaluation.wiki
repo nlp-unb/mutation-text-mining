@@ -36,7 +36,7 @@ Contexts/Named Graphs are for the four experiments:<br>
 == SPARQL Query ==
 Calculates Precision and Recall
 {{{
-PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
+PREFIX mieo:<http://cbakerlab.unbsj.ca:8080/ontologies/mutation-impact-extraction-ontology.owl#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX aof:<http://purl.org/ao/foaf/>
