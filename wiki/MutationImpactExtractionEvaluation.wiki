@@ -1,6 +1,7 @@
 #summary One-sentence summary of this page.
+<wiki:toc max_depth="1" />
+= Evaluation Task: Mutation Impact Extraction =
 
-= Task =
 *Mutation Impact Extraction* is identifying the impact of the mutational change with respect to the wild-type protein. The result can be of any form, but should contain all the knowledge stated in a source concerning the impact. <br>
 
 = Metrics =
@@ -11,7 +12,279 @@ Two standard measures for mutation impact extraction performance evaluation are 
 What to consider as correct mutation impact depends on the focus of evaluation. See example of specified metric below.
 
 = Specified metric #1 =
-In order for an extracted mutation impact to be considered correct all the parts have to be correct i.e. the protein the mutation is grounded to, the protein property that is being impacted, the direction of the impact and the causal mutation.
+The metrics were taken from [1]. 
+In order for an extracted mutation impact to be considered correct the following  parts have to be correct i.e. *the protein property* that is being impacted, *the direction* of the impact and *the causal mutation*. If the protein property was a molecular function, it had to be normalised by grounding to Gene Ontology.
+
+Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evaluated on 2 different corpora -- Enzyminer Corpus and DHLA Corpus (see details [http://code.google.com/p/mutation-text-mining/wiki/Corpora here]). For each experiment, a SPARQL repository/endpoint is available:<br>
+ * Open Mutation Miner on Enzyminer Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/impact-mies/query]
+<br>
+ * Open Mutation Miner on DHLA Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/dhla-omm/query]
+<br>
+ * Mutation Impact Extraction System on Enzyminer Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/enzyminer-mies/query]
+<br>
+ * Mutation Impact Extraction System on DHLA Corpus:
+   * [http://138.119.12.53:8080/openrdf-workbench/repositories/dhla-mies/query]
+<br>
+
+Contexts/Named Graphs are for the four experiments:<br>
+`<http://example.com/gold-standard.rdf>`<br>
+`<http://example.com/experiment.rdf>`
+<br><br>
+
+= SPARQL Query =
+Calculates Precision and Recall
+{{{
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio:<http://semanticscience.org/resource/>
+PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
+PREFIX lsrn:<http://purl.oclc.org/SADI/LSRN/>
+PREFIX ao:<http://purl.org/ao/>
+PREFIX aof:<http://purl.org/ao/foaf/>
+PREFIX pav:<http://purl.org/pav/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT 
+(str(xsd:float(?correct)/xsd:float(?found)) AS ?precision)
+(str(xsd:float(?correct)/xsd:float(?all)) AS ?recall) 
+?correct  ?found ?all
+WHERE
+{
+# correct
+{
+SELECT (COUNT (*) as ?correct)
+WHERE{
+SELECT DISTINCT ?pubmed_id ?mut_id ?protein_property_class ?property_change_class
+
+WHERE {
+
+GRAPH <http://example.com/gold-standard.rdf> {
+
+      ?document a sio:SIO_000154 .
+      ?document sio:SIO_000629 ?pubmed_record .
+      ?pubmed_record a lsrn:PMID_Record .
+      ?pubmed_record sio:SIO_000008 ?pubmed_identifier .
+      ?pubmed_identifier a lsrn:PMID_Identifier .
+      ?pubmed_identifier sio:SIO_000300 ?pubmed_id .
+
+      ?ann_mutation a ao:Annotation .
+      ?ann_mutation aof:annotatesDocument ?document .
+      ?ann_mutation ao:hasTopic ?mutation .
+      ?mutation a mieo:CombinedAminoAcidSequenceChange .
+      ?mutation sio:SIO_000673 ?mut_identifier .
+      ?mut_identifier a mieo:CombinedAminoAcidSequenceChange_Identifier .
+      ?mut_identifier sio:SIO_000300 ?mut_id .
+
+      ?ann_mutation_application a ao:Annotation .
+      ?ann_mutation_application aof:annotatesDocument ?document .
+      ?ann_mutation_application ao:hasTopic ?mutation_application .
+      ?mutation_application a mieo:ProteinMutationApplication .
+      ?mutation_application mieo:isApplicationOfMutation ?mutation .
+
+      ?ann_statement_of_mutation_effect a ao:Annotation .
+      ?ann_statement_of_mutation_effect aof:annotatesDocument ?document .
+      ?ann_statement_of_mutation_effect ao:hasTopic ?statement_of_mutation_effect .
+      ?statement_of_mutation_effect a mieo:StatementOfMutationEffect .
+      ?statement_of_mutation_effect mieo:arg1 ?mutation_application .
+      ?statement_of_mutation_effect mieo:arg2 ?property_change .
+
+      ?ann_property_change a ao:Annotation .
+      ?ann_property_change aof:annotatesDocument ?document .
+      ?ann_property_change ao:hasTopic ?property_change .
+      ?property_change a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+      #?mutation_application mieo:mutationApplicationCausesChange ?property_change .
+      ?property_change mieo:propertyChangeAppliesTo ?protein_property .
+
+      ?ann_protein_property a ao:Annotation .
+      ?ann_protein_property aof:annotatesDocument ?document .
+      ?ann_protein_property ao:hasTopic ?protein_property .
+      ?protein_property a ?protein_property_class .
+      ?protein_property_class rdfs:subClassOf mieo:ProteinProperty .
+
+}
+
+GRAPH <http://example.com/experiment.rdf> {
+
+      ?document2 a sio:SIO_000154 .
+      ?document2 sio:SIO_000629 ?pubmed_record2 .
+      ?pubmed_record2 a lsrn:PMID_Record .
+      ?pubmed_record2 sio:SIO_000008 ?pubmed_identifier2 .
+      ?pubmed_identifier2 a lsrn:PMID_Identifier .
+      ?pubmed_identifier2 sio:SIO_000300 ?pubmed_id .
+
+      ?ann_mutation2 a ao:Annotation .
+      ?ann_mutation2 aof:annotatesDocument ?document2 .
+      ?ann_mutation2 ao:hasTopic ?mutation2 .
+      ?mutation2 a mieo:CombinedAminoAcidSequenceChange .
+      ?mutation2 sio:SIO_000673 ?mut_identifier2 .
+      ?mut_identifier2 a mieo:CombinedAminoAcidSequenceChange_Identifier .
+      ?mut_identifier2 sio:SIO_000300 ?mut_id .
+
+      ?ann_mutation_application2 a ao:Annotation .
+      ?ann_mutation_application2 aof:annotatesDocument ?document2 .
+      ?ann_mutation_application2 ao:hasTopic ?mutation_application2 .
+      ?mutation_application2 a mieo:ProteinMutationApplication .
+      ?mutation_application2 mieo:isApplicationOfMutation ?mutation2 .
+
+
+      ?ann_statement_of_mutation_effect2 a ao:Annotation .
+      ?ann_statement_of_mutation_effect2 aof:annotatesDocument ?document2 .
+      ?ann_statement_of_mutation_effect2 ao:hasTopic ?statement_of_mutation_effect2 .
+      ?statement_of_mutation_effect2 a mieo:StatementOfMutationEffect .
+      ?statement_of_mutation_effect2 mieo:arg1 ?mutation_application2 .
+      ?statement_of_mutation_effect2 mieo:arg2 ?property_change2 .
+
+      ?ann_property_change2 a ao:Annotation .
+      ?ann_property_change2 aof:annotatesDocument ?document2 .
+      ?ann_property_change2 ao:hasTopic ?property_change2 .
+      ?property_change2 a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+      #?mutation_application mieo:mutationApplicationCausesChange ?property_change .
+
+      ?property_change2 mieo:propertyChangeAppliesTo ?protein_property2 .
+
+      ?ann_protein_property2 a ao:Annotation .
+      ?ann_protein_property2 aof:annotatesDocument ?document2 .
+      ?ann_protein_property2 ao:hasTopic ?protein_property2 .
+      ?protein_property2 a ?protein_property_class .
+      ?protein_property_class rdfs:subClassOf mieo:ProteinProperty .
+
+}
+}
+ 
+}
+}
+# end correct
+
+# found
+{
+SELECT (COUNT (*) as ?found)
+WHERE{
+SELECT DISTINCT ?pubmed_id ?mut_id ?protein_property_class ?property_change_class
+
+WHERE {
+
+GRAPH <http://example.com/experiment.rdf> {
+
+      ?document2 a sio:SIO_000154 .
+      ?document2 sio:SIO_000629 ?pubmed_record2 .
+      ?pubmed_record2 a lsrn:PMID_Record .
+      ?pubmed_record2 sio:SIO_000008 ?pubmed_identifier2 .
+      ?pubmed_identifier2 a lsrn:PMID_Identifier .
+      ?pubmed_identifier2 sio:SIO_000300 ?pubmed_id .
+
+      ?ann_mutation2 a ao:Annotation .
+      ?ann_mutation2 aof:annotatesDocument ?document2 .
+      ?ann_mutation2 ao:hasTopic ?mutation2 .
+      ?mutation2 a mieo:CombinedAminoAcidSequenceChange .
+      ?mutation2 sio:SIO_000673 ?mut_identifier2 .
+      ?mut_identifier2 a mieo:CombinedAminoAcidSequenceChange_Identifier .
+      ?mut_identifier2 sio:SIO_000300 ?mut_id .
+
+      ?ann_mutation_application2 a ao:Annotation .
+      ?ann_mutation_application2 aof:annotatesDocument ?document2 .
+      ?ann_mutation_application2 ao:hasTopic ?mutation_application2 .
+      ?mutation_application2 a mieo:ProteinMutationApplication .
+      ?mutation_application2 mieo:isApplicationOfMutation ?mutation2 .
+
+      ?ann_statement_of_mutation_effect2 a ao:Annotation .
+      ?ann_statement_of_mutation_effect2 aof:annotatesDocument ?document2 .
+      ?ann_statement_of_mutation_effect2 ao:hasTopic ?statement_of_mutation_effect2 .
+      ?statement_of_mutation_effect2 a mieo:StatementOfMutationEffect .
+      ?statement_of_mutation_effect2 mieo:arg1 ?mutation_application2 .
+      ?statement_of_mutation_effect2 mieo:arg2 ?property_change2 .
+
+      ?ann_property_change2 a ao:Annotation .
+      ?ann_property_change2 aof:annotatesDocument ?document2 .
+      ?ann_property_change2 ao:hasTopic ?property_change2 .
+      ?property_change2 a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+      #?mutation_application mieo:mutationApplicationCausesChange ?property_change .
+      ?property_change2 mieo:propertyChangeAppliesTo ?protein_property2 .
+
+      ?ann_protein_property2 a ao:Annotation .
+      ?ann_protein_property2 aof:annotatesDocument ?document2 .
+      ?ann_protein_property2 ao:hasTopic ?protein_property2 .
+      ?protein_property2 a ?protein_property_class .
+      ?protein_property_class rdfs:subClassOf mieo:ProteinProperty .
+
+}
+} 
+
+}
+}
+# end found
+
+# all
+{
+SELECT (COUNT (*) as ?all)
+WHERE{
+SELECT DISTINCT ?pubmed_id ?mut_id ?protein_property_class ?property_change_class
+
+WHERE {
+
+GRAPH <http://example.com/gold-standard.rdf> {
+
+      ?document a sio:SIO_000154 .
+      ?document sio:SIO_000629 ?pubmed_record .
+      ?pubmed_record a lsrn:PMID_Record .
+      ?pubmed_record sio:SIO_000008 ?pubmed_identifier .
+      ?pubmed_identifier a lsrn:PMID_Identifier .
+      ?pubmed_identifier sio:SIO_000300 ?pubmed_id .
+
+      ?ann_mutation a ao:Annotation .
+      ?ann_mutation aof:annotatesDocument ?document .
+      ?ann_mutation ao:hasTopic ?mutation .
+      ?mutation a mieo:CombinedAminoAcidSequenceChange .
+      ?mutation sio:SIO_000673 ?mut_identifier .
+      ?mut_identifier a mieo:CombinedAminoAcidSequenceChange_Identifier .
+      ?mut_identifier sio:SIO_000300 ?mut_id .
+
+      ?ann_mutation_application a ao:Annotation .
+      ?ann_mutation_application aof:annotatesDocument ?document .
+      ?ann_mutation_application ao:hasTopic ?mutation_application .
+      ?mutation_application a mieo:ProteinMutationApplication .
+      ?mutation_application mieo:isApplicationOfMutation ?mutation .
+
+      ?ann_statement_of_mutation_effect a ao:Annotation .
+      ?ann_statement_of_mutation_effect aof:annotatesDocument ?document .
+      ?ann_statement_of_mutation_effect ao:hasTopic ?statement_of_mutation_effect .
+      ?statement_of_mutation_effect a mieo:StatementOfMutationEffect .
+      ?statement_of_mutation_effect mieo:arg1 ?mutation_application .
+      ?statement_of_mutation_effect mieo:arg2 ?property_change .
+
+      ?ann_property_change a ao:Annotation .
+      ?ann_property_change aof:annotatesDocument ?document .
+      ?ann_property_change ao:hasTopic ?property_change .
+      ?property_change a ?property_change_class .
+      ?property_change_class rdfs:subClassOf mieo:ProteinPropertyChange .
+      #?mutation_application mieo:mutationApplicationCausesChange ?property_change .
+      ?property_change mieo:propertyChangeAppliesTo ?protein_property .
+
+      ?ann_protein_property a ao:Annotation .
+      ?ann_protein_property aof:annotatesDocument ?document .
+      ?ann_protein_property ao:hasTopic ?protein_property .
+      ?protein_property a ?protein_property_class .
+      ?protein_property_class rdfs:subClassOf mieo:ProteinProperty .
+
+}
+} 
+}
+}
+# all
+}
+
+# returns n results
+
+}}}
+
+
+= Specified metric #2 =
+In order for an extracted mutation impact to be considered correct all the parts have to be correct i.e. *the protein* the mutation is grounded to, *the protein property* that is being impacted, *the direction* of the impact and *the causal mutation*.
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
@@ -373,3 +646,10 @@ ORDER BY ?pubmed_id
 # returns 24 results
 
 }}}
+
+
+
+= References =
+<br>
+`[1]` [http://www.biomedcentral.com/1471-2164/13/S4/S10 Laurila JB, Naderi N, Witte R, Riazanov A, Kouznetsov A, Baker CJO: Algorithms and semantic infrastructure for mutation impact extraction and grounding. BMC Genomics 2010, 11(Suppl 4):S24.]
+<br>
