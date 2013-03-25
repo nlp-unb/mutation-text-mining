@@ -296,7 +296,7 @@ SPARQL Endpoint with demo corpus and loaded demo experiment results: [http://138
 Insert queries into Sesame triple store query interface (Query in the left panel) 
 
 
-==== SPARQL: correct mutation impacts ====
+=== SPARQL: correct mutation impacts===
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -308,7 +308,7 @@ SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_rec
 
 WHERE {
 
-GRAPH <http://example.com/gold-standard.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
 
       #	'article'
       ?document a sio:SIO_000154 .
@@ -369,7 +369,7 @@ GRAPH <http://example.com/gold-standard.rdf> {
       ?protein_property a ?protein_property_class .
 }
 
-GRAPH <http://example.com/experiment.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
@@ -422,7 +422,7 @@ ORDER BY ?pubmed_id
 }}}
 
 
-==== SPARQL: all retrieved mutation impacts ====
+=== SPARQL: all retrieved mutation impacts ===
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -435,7 +435,8 @@ SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_rec
 
 WHERE {
 
-GRAPH <http://example.com/gold-standard.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
+
       #	'article'
       ?document a sio:SIO_000154 .
       #	'is subject of'
@@ -496,7 +497,7 @@ GRAPH <http://example.com/gold-standard.rdf> {
 }
 
 
-GRAPH <http://example.com/experiment.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
@@ -549,7 +550,7 @@ ORDER BY ?pubmed_id
 
 }}}
 
-==== SPARQL: all uniquely mentioned mutation impacts and available in gold standard ====
+=== SPARQL: all uniquely mentioned mutation impacts and available in gold standard ===
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -562,7 +563,7 @@ SELECT DISTINCT ?pubmed_id ?denotation_value ?wt_residue ?position_value ?mut_re
 
 WHERE {
 
-GRAPH <http://example.com/gold-standard.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
 
       #	'article'
       ?document a sio:SIO_000154 .
@@ -624,7 +625,7 @@ GRAPH <http://example.com/gold-standard.rdf> {
 }
 
 
-GRAPH <http://example.com/experiment.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
