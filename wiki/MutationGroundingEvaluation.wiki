@@ -21,7 +21,7 @@ SPARQL Endpoint with demo corpus and loaded demo experiment results:
 
 Insert queries into Sesame triple store query interface (*Query* in the left panel)
 
-=== SPARQL: correctly grounded mutations ===
+== SPARQL: correctly grounded mutations ==
 {{{
 PREFIX sio:<http://semanticscience.org/resource/>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
@@ -31,7 +31,7 @@ SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_rec
 
 WHERE {
 
-GRAPH <http://example.com/gold-standard.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
       #	'article'
       ?document a sio:SIO_000154 .
       #	'is subject of'
@@ -73,7 +73,7 @@ GRAPH <http://example.com/gold-standard.rdf> {
       FILTER (?uniprot_record_id != "")
 }
 
-GRAPH <http://example.com/experiment.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
       
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
@@ -109,7 +109,7 @@ ORDER BY ?pubmed_id
 # returns 11 results
 }}}
 
-=== SPARQL: all grounded mutations ===
+= SPARQL: all grounded mutations =
 {{{
 PREFIX sio:<http://semanticscience.org/resource/>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
@@ -118,7 +118,7 @@ PREFIX lsrn:<http://purl.oclc.org/SADI/LSRN/>
 SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_record_id
 WHERE {
 
-GRAPH <http://example.com/gold-standard.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
 
       #	'article'
       ?document a sio:SIO_000154 .
@@ -163,7 +163,7 @@ GRAPH <http://example.com/gold-standard.rdf> {
 
 
 FILTER EXISTS {
-GRAPH <http://example.com/experiment.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
@@ -207,7 +207,7 @@ ORDER BY ?pubmed_id
 }}}
 
 
-=== SPARQL: all mutations in the gold standard ===
+= SPARQL: all mutations in the gold standard =
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
@@ -219,7 +219,7 @@ SELECT DISTINCT ?pubmed_id ?wt_residue ?position_value ?mut_residue ?uniprot_rec
 
 WHERE {
 
-GRAPH <http://example.com/gold-standard.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-demo.rdf> {
 
       #	'article'
       ?document a sio:SIO_000154 .
@@ -262,7 +262,7 @@ GRAPH <http://example.com/gold-standard.rdf> {
       FILTER (?uniprot_record_id != "")
 }
 
-GRAPH <http://example.com/experiment.rdf> {
+GRAPH <http://example.com/enzyminer-corpus-experiment.rdf> {
 
       ?document2 a sio:SIO_000154 .
       ?document2 sio:SIO_000629 ?pubmed_record2 .
