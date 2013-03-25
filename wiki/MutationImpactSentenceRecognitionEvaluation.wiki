@@ -6,7 +6,7 @@ This task was evaluated in `[1]`.
 <br>
  * *precision*, defined as the number of correctly identified impact sentences over all recognized impact sentences. The sentence is correctly identified if it matched the gold standard.<br>
  * *recall*, defined as the number of correctly identified impact sentences over all impact sentences in gold standard.
-<br><br>
+<br>
 
 
 = Example =
@@ -27,7 +27,7 @@ Open Mutation Miner `[2]` and Mutation Impact Extraction System `[3]` were evalu
 Contexts/Named Graphs are for the all four experiments:<br>
 `<http://example.com/gold-standard.rdf>`<br>
 `<http://example.com/experiment.rdf>`
-
+<br>
 = SPARQL Query =
 {{{
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
