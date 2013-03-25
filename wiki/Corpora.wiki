@@ -29,6 +29,20 @@ in the database. Based on this comparison, we discarded about 70 documents that 
 This corpus containing 40 documents was used in `[1]' to test the Open Mutation Miner system. It contains impact sentence annotations with the EC codes of enzymes, host organisms and mutations. An impact sentence describes a mutation impact on a protein property and does not necessarily contain a mutation
 mention. 48 of 2045 impact sentences were not grounded to mutations. If a sentence contained several impact mentions, it was annotated several times. Unlike the Enzyminer corpus, the OMM Impact corpus was not annotated with protein properties or mutation impact direction.
 
+= Statistics. =
+|| || *Number of documents* || *UniProt IDs* || *Mutations* ||
+|| !EnzyMiner || 38  || 49 || 176 ||
+|| !KinMutBase || 128 || 26 || 271 ||
+|| DHLA || 13 || 4 || 52 ||
+|| PIK3CA || 30 || 1 || 169 ||
+|| FGFR3 || 26 || 1 || 174 ||
+|| MEN1 || 7 || 1 || 22 ||
+
+|| || Number of documents || Impact mutations || Impacts (mutation, protein property, impact direction) || Impact sentences || Impact sentences grounded to mutations ||
+|| OMM Impact || 40 || 223 || - || 2045 || 1997 ||
+|| !EnzyMiner || 38 || 172 || 282 || 440 || 440 ||
+|| DHLA || 13 || 52 || 73 || - || - ||
+
 = Format. =
 Corpora are available in RDF format.
 *You can obtains them by simple registration [RegistrationPage HERE]*
