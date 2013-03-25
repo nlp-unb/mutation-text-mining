@@ -40,7 +40,7 @@ Calculates Precision and Recall
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sio:<http://semanticscience.org/resource/>
-PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
+PREFIX mieo:<http://cbakerlab.unbsj.ca:8080/ontologies/mutation-impact-extraction-ontology.owl#>
 PREFIX lsrn:<http://purl.oclc.org/SADI/LSRN/>
 PREFIX ao:<http://purl.org/ao/>
 PREFIX aof:<http://purl.org/ao/foaf/>
