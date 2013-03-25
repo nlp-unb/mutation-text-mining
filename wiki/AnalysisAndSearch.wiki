@@ -1,5 +1,5 @@
 #summary Corpora anaysis and search examples.
-
+<wiki:toc max_depth="3" />
 = Corpora anaysis and search =
 The SPARQL query language can be directly used for calculating system performance metrics as well as *for various drill-down searches in the gold standard corpora and experiment results*. It is very flexible and implement easy querying mechanism.
 
