@@ -1,5 +1,5 @@
 #summary One-sentence summary of this page.
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 = Evaluation Task: Mutation Impact Extraction =
 
 *Mutation Impact Extraction* is identifying the impact of the mutational change with respect to the wild-type protein. The result can be of any form, but should contain all the knowledge stated in a source concerning the impact. <br>
