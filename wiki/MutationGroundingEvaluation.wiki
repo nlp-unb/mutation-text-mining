@@ -1,7 +1,7 @@
 #summary MutationGroundingEvaluation.
 <wiki:toc max_depth="3" />
 
-= Evaluation Task: Mutation Grounding To Protein Sequences (To UniProtIDs) =
+= Evaluation Task: Mutation Grounding to UniProtIDs (Protein Sequences) =
 *Mutation Grounding* is assigning mutations from text to protein sequences. <br>
 The specific task of mutation grounding algorithms is to find, in a sequence database, the exact sequence referred to in the text and to do this by verifying whether the exact positions and identity of the wild-type amino acid residues, described in the texts, are found on the candidate sequence.
 
