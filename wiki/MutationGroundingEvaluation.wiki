@@ -1,24 +1,27 @@
 #summary MutationGroundingEvaluation.
+<wiki:toc max_depth="3" />
 
-= Task =
+= Evaluation Task: Mutation Grounding To Protein Sequences (To UniProtIDs) =
 *Mutation Grounding* is assigning mutations from text to protein sequences. <br>
 The specific task of mutation grounding algorithms is to find, in a sequence database, the exact sequence referred to in the text and to do this by verifying whether the exact positions and identity of the wild-type amino acid residues, described in the texts, are found on the candidate sequence.
 
 
-= Metrics =
+== Metrics ==
 Two standard measures for mutation grounding performance evaluation are used:
  * *precision*, defined as the fraction of *correctly grounded mutations* (true positives) over *all grounded mutations* (true positives + false positives), and
  * *recall*, defined as the fraction of *correctly grounded mutations* over *all mutations in the gold standard* (true positives + false negatives).
 
 The example below shows evaluation using *micro averaging* that, essentially, treats the whole corpus as one large document: it calculates global recall and precision over all evaluated instances.
 
-= SPARQL queries to calculate results =
+== SPARQL queries to calculate results ==
 Here are presented SPARQL query templates for performance metrics computation.
 <br><br>
-!!! Try [DemoMutationGroundingQueries DEMO queries] (build from these templates) on DEMO SPARQL Endpoint.
-To use template one has just to specify named graphs.
+SPARQL Endpoint with demo corpus and loaded demo experiment results:
+[http://138.119.12.53:8080/openrdf-workbench/repositories/mutation-corpus-demo]
 
-== SPARQL: correctly grounded mutations ==
+Insert queries into Sesame triple store query interface (*Query* in the left panel)
+
+=== SPARQL: correctly grounded mutations ===
 {{{
 PREFIX sio:<http://semanticscience.org/resource/>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
@@ -106,7 +109,7 @@ ORDER BY ?pubmed_id
 # returns 11 results
 }}}
 
-= SPARQL: all grounded mutations =
+=== SPARQL: all grounded mutations ===
 {{{
 PREFIX sio:<http://semanticscience.org/resource/>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
@@ -204,7 +207,7 @@ ORDER BY ?pubmed_id
 }}}
 
 
-= SPARQL: all mutations in the gold standard =
+=== SPARQL: all mutations in the gold standard ===
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
