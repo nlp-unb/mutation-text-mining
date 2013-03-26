@@ -2,10 +2,10 @@
 
 Download
 
-Usage:
-java -cp mutation-benchmark-0.1-jar-with-dependencies.jar ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI <br>
+Usage: align strings in impact-omm repository on http://localhost:8080/openrdf-sesame between two graphs - `http://example.com/gold-standard.rdf` and `http://example.com/experiment.rdf` in run mode (all alignments will be applied, in "simulate" mode - alignement is not applied).
+java -cp mutation-benchmark-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI <br>
 -s `http://localhost:8080/openrdf-sesame` <br>
 -r impact-omm <br>
--g http://example.com/gold-standard.rdf <br>
--e http://example.com/experiment.rdf <br>
+-g `http://example.com/gold-standard.rdf` <br>
+-e `http://example.com/experiment.rdf` <br>
 --mode simulate
