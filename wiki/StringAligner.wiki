@@ -4,7 +4,8 @@ Download
 
 Usage: align strings in _impact-omm_ repository on _`http://localhost:8080/openrdf-sesame`_ between two graphs - _`http://example.com/gold-standard.rdf`_ and _`http://example.com/experiment.rdf`_ in _run_ mode (in "run" mode, all alignments will be applied; in "simulate" mode, alignments are not applied to the repository).
 {{{
-java -cp mutation-benchmark-1.0-jar-with-dependencies.jar \ ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
+java -cp mutation-benchmark-1.0-jar-with-dependencies.jar \
+ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
 -s http://localhost:8080/openrdf-sesame \
 -r impact-omm \
 -g http://example.com/gold-standard.rdf \
