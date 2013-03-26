@@ -11,6 +11,6 @@
 java -cp benchmark/sesame-utils-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.sesame_utils.SesameCLI <br> 
 -t add <br> 
 -i input.rdf <br> 
--s http://localhost:8080/openrdf-sesame <br> 
+-s `http://localhost:8080/openrdf-sesame` <br> 
 -r experiment-repo <br> 
--c http://example.com/gold-standard.rdf
+-c `http://example.com/gold-standard.rdf`
