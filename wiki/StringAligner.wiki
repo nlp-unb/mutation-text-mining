@@ -17,7 +17,19 @@ String Aligner is part of _mutation-benchmark_ project. Download jar file [http:
 Source Code is available [http://code.google.com/p/mutation-text-mining/downloads/detail?name=mutation-benchmark-1.0-SNAPSHOT-project.zip&can=2&q= HERE]
 
 == Usage ==
-Example: align strings in _impact-omm_ repository on _`http://localhost:8080/openrdf-sesame`_ between two graphs - _`http://example.com/gold-standard.rdf`_ and _`http://example.com/experiment.rdf`_ in _run_ mode (in "run" mode, all alignments will be applied; in "simulate" mode, alignments are not applied to the repository).
+Interface:
+{{{
+java -cp mutation-benchmark-<version>-jar-with-dependencies.jar \
+ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
+-s <sesame-server-url> \
+-r <sesame-remository-name> \
+-g <context-1> \
+-e <context-2> \
+--mode <mode>
+}}}
+Note: In mode "run": all alignments will be applied; in "simulate" mode, alignments are not applied to the repository)
+<br>
+Example: align strings in _impact-omm_ repository on _`http://localhost:8080/openrdf-sesame`_ between two graphs - _`http://example.com/gold-standard.rdf`_ and _`http://example.com/experiment.rdf`_ in _run_ mode .
 {{{
 java -cp mutation-benchmark-1.0-jar-with-dependencies.jar \
 ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
