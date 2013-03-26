@@ -7,8 +7,8 @@ be aligned to the gold standard only once. Two fragments get aligned if the simi
 Technically, the tool tries to align all instances of aos:!TextSelector class in two graphs and adds 4 statements/triples
 {{{
    :sim1 a mieo:StringSimilarity .
-   :str1 sio:'has attribute' :sim1 . # SIO_000008
-   :str2 sio:'has attribute' :sim1 . # SIO_000008
+   :text_selector_1 sio:'has attribute' :sim1 . # SIO_000008
+   :text_selector_2 sio:'has attribute' :sim1 . # SIO_000008
    :sim sio:'has value' :value . # SIO_000300
 }}}
 
