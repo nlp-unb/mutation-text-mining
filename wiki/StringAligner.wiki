@@ -4,7 +4,7 @@ Download
 
 Usage:
 java -cp mutation-benchmark-0.1-jar-with-dependencies.jar ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI <br>
--s http://localhost:8080/openrdf-sesame <br>
+-s `http://localhost:8080/openrdf-sesame` <br>
 -r impact-omm <br>
 -g http://example.com/gold-standard.rdf <br>
 -e http://example.com/experiment.rdf <br>
