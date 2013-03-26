@@ -1,8 +1,11 @@
 #summary Tool to align strings. Aligns strings in RDF models.
 
-Download
-
-Usage: align strings in _impact-omm_ repository on _`http://localhost:8080/openrdf-sesame`_ between two graphs - _`http://example.com/gold-standard.rdf`_ and _`http://example.com/experiment.rdf`_ in _run_ mode (in "run" mode, all alignments will be applied; in "simulate" mode, alignments are not applied to the repository).
+== Download ==
+String Aligner is part of _mutation-benhcmark_ project. Download jar file [http://code.google.com/p/mutation-text-mining/downloads/detail?name=mutation-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar&can=2&q= HERE] <br>
+Source Code is available [http://code.google.com/p/mutation-text-mining/downloads/detail?name=mutation-benchmark-1.0-SNAPSHOT-project.zip&can=2&q= HERE]
+<br>
+== Usage ==
+Example: align strings in _impact-omm_ repository on _`http://localhost:8080/openrdf-sesame`_ between two graphs - _`http://example.com/gold-standard.rdf`_ and _`http://example.com/experiment.rdf`_ in _run_ mode (in "run" mode, all alignments will be applied; in "simulate" mode, alignments are not applied to the repository).
 {{{
 java -cp mutation-benchmark-1.0-jar-with-dependencies.jar \
 ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
@@ -14,7 +17,7 @@ ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
 }}}
 
 <br>
-Delete alignment:
+== Delete alignment ==
 {{{
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
