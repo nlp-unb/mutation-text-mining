@@ -13,6 +13,7 @@ java -cp mutation-benchmark-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.mut
 <br>
 Delete alignment:
 {{{
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
 PREFIX sio:<http://semanticscience.org/resource/>
 DELETE WHERE {
