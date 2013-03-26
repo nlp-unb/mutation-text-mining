@@ -4,7 +4,7 @@
 The provenance enhancement utility helps in situations when the sources of annotation data only provide fragments of texts as provenance, without specifying their positions in the text, such as in the Enzyminer and OMM Impact corpora. Note that the annotations in the OMM Impact corpus have position numbers, but, since the original text is not provided, the alignment of annotations with the original text still requires an additional simple program.<br>
 We implemented a procedure to align corresponding text fragments based on their similarity. To calculate a similarity score for two fragment candidates we use the implementation of Levenstein distance algorithm from Lucene. If fragments had differing lengths, we calculated the similarity score for their overlap. We avoided multiple alignments – each text fragment in a systems results can
 be aligned to the gold standard only once. Two fragments get aligned if the similarity score is above the threshold. We used a threshold equal to 0.83 to boost the precision on the Enzyminer corpus used for training to 100%. The price for this is a slight decrease in recall, which still reaches 0.99. The procedure achieved >0.99 for both precision and recall on the test corpus – the OMM Impact corpus.<br>
-Technically, the tool tries to align all instances of aos:!TextSelector class in two graphs and adds 4 statements/triples
+Technically, the tool tries to align all instances of aos:!TextSelector class in two graphs and adds 4 statements/triples:
 {{{
    :sim1 a mieo:StringSimilarity .
    :text_selector_1 sio:'has attribute' :sim1 . # SIO_000008
