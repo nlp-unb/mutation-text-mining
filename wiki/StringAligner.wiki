@@ -28,7 +28,7 @@ ca.unbsj.cbakerlab.mutation_benchmark.SimilarStringAlignerCLI \
 --mode <mode>
 }}}
 Note: In mode "run": all alignments will be applied; in "simulate" mode, alignments are not applied to the repository)
-<br>
+<br><br>
 Example: align strings in _impact-omm_ repository on _`http://localhost:8080/openrdf-sesame`_ between two graphs - _`http://example.com/gold-standard.rdf`_ and _`http://example.com/experiment.rdf`_ in _run_ mode .
 {{{
 java -cp mutation-benchmark-1.0-jar-with-dependencies.jar \
