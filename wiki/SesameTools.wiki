@@ -3,10 +3,10 @@
 = Sesame Command Line Utilities =
 [http://mutation-text-mining.googlecode.com/files/sesame-utils-1.0-jar-with-dependencies.jar Download]
 
-*Get help:* java -cp sesame-utils-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.sesame_utils.SesameCLI -?
+*Get help:* java -cp `sesame-utils-1.0-jar-with-dependencies.jar` ca.unbsj.cbakerlab.sesame_utils.SesameCLI -?
 
 <br>
-*Usage example:* Add input.rdf to experiment-repo repository on server http://localhost:8080/openrdf-sesame with context http://example.com/gold-standard.rdf
+*Usage example:* Add `input.rdf` to experiment-repo repository on server `http://localhost:8080/openrdf-sesame` with context `http://example.com/gold-standard.rdf`
 
 java -cp benchmark/sesame-utils-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.sesame_utils.SesameCLI <br> 
 -t add <br> 
