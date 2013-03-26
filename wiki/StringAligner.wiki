@@ -8,4 +8,17 @@ java -cp mutation-benchmark-1.0-jar-with-dependencies.jar ca.unbsj.cbakerlab.mut
 -r impact-omm <br>
 -g `http://example.com/gold-standard.rdf` <br>
 -e `http://example.com/experiment.rdf` <br>
---mode simulate
+--mode run
+
+<br>
+Delete alignment:
+{{{
+PREFIX mieo:<http://unbsj.biordf.net/ontologies/mutation-impact-extraction-ontology.owl#>
+PREFIX sio:<http://semanticscience.org/resource/>
+DELETE WHERE {
+   ?sim a mieo:StringSimilarity .
+   ?str1 sio:SIO_000008 ?sim . 
+   ?str2 sio:SIO_000008 ?sim .
+   ?sim sio:SIO_000300 ?value .
+}
+}}}
